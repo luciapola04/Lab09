@@ -28,7 +28,7 @@ public final class SimpleGUI {
         panel1.add(panel2, BorderLayout.SOUTH);
         final JTextField textField = new JTextField();
         final JTextArea textArea = new JTextArea();
-        textArea.setEnabled(false);
+        textArea.setEditable(false);
         final JButton printButton = new JButton("Print");
         final JButton historyButton = new JButton("Show history");
         panel1.add(textField, BorderLayout.NORTH);

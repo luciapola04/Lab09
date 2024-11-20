@@ -22,9 +22,6 @@ public final class SimpleController implements Controller {
 
     @Override
     public void setNextString(final String nextString) {
-        if (nextString.isEmpty()) {
-            throw new NullPointerException(nextString + " cannot be null!"); //NOPMD: exercises requires it
-        }
         this.currentString = nextString;
     }
 
@@ -40,6 +37,9 @@ public final class SimpleController implements Controller {
 
     @Override
     public void printCurrentString() {
+        if (this.currentString == null) {
+            throw new IllegalStateException("The string to be printed cannot be null!");
+        }
         this.list.add(this.currentString);
         System.out.println("CURRENT STRING: " + this.currentString); //NOPMD: exercises requires it
     }
