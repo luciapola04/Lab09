@@ -26,7 +26,6 @@ public final class SimpleController implements Controller {
             throw new NullPointerException(nextString + " cannot be null!"); //NOPMD: exercises requires it
         }
         this.currentString = nextString;
-        this.list.add(this.currentString);
     }
 
     @Override
@@ -41,6 +40,7 @@ public final class SimpleController implements Controller {
 
     @Override
     public void printCurrentString() {
+        this.list.add(this.currentString);
         System.out.println("CURRENT STRING: " + this.currentString); //NOPMD: exercises requires it
     }
 }
