@@ -45,8 +45,8 @@ public final class SimpleGUI {
         printButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                controller.setNextString(textField.getText());
-                controller.printCurrentString();
+                SimpleGUI.this.controller.setNextString(textField.getText());
+                SimpleGUI.this.controller.printCurrentString();
             } 
         });
 
@@ -54,7 +54,7 @@ public final class SimpleGUI {
 
             @Override
             public void actionPerformed(final ActionEvent e) {
-                textArea.setText(controller.getStringsHistory().toString());
+                textArea.setText(SimpleGUI.this.controller.getStringsHistory().toString());
             }
         });
     }
