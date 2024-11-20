@@ -116,7 +116,6 @@ public class BadIOGUI {
          * OK, ready to push the frame onscreen
          */
         frame.setVisible(true);
-
         /*
          * To resize the frame to the minimum size prior to displaying
          */
