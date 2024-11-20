@@ -18,9 +18,10 @@ import javax.swing.JTextField;
  */
 public final class SimpleGUI {
     private final JFrame frame = new JFrame("String Printer");
-    private final SimpleController controller = new SimpleController();
+    private final SimpleController controller;
 
     SimpleGUI() {
+        this.controller = new SimpleController();
         final JPanel panel1 = new JPanel();
         final JPanel panel2 = new JPanel();
         panel1.setLayout(new BorderLayout());
